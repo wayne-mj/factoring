@@ -19,6 +19,11 @@ program factoring
             stop
         end if
 
+        if (n .eq. 0) then
+            print *, "0 has no factors"
+            stop
+        end if
+
         factors = factored(n)
         print *, "Factors of ", n, " are: "
         do i = 1, size(factors)
